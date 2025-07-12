@@ -2,7 +2,7 @@ import { Link } from 'expo-router';
 import { Image, StyleSheet, Text, View, useColorScheme } from 'react-native';
 import { Colors } from '../constants/colors';
 
-import Logo from '../assets/logo/Logo.jpg';
+import Logo from '../assets/logo/Logo.png';
 
 import ThemedView from '../components/ThemedView';
 
@@ -66,17 +66,9 @@ const styles = StyleSheet.create({
     marginVertical: 10,
   },
   Image: {
-    width: 200,
-    height: 200,
+    width: 150,
+    height: 150,
     borderRadius: 100,
-  },
-  card: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    margin: 20,
-    padding: 15,
-    borderRadius: 10,
   },
   link: {
     padding: 10,
