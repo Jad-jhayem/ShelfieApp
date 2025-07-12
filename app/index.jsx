@@ -4,18 +4,19 @@ import { Colors } from '../constants/colors';
 
 import Logo from '../assets/logo/Logo.jpg';
 
+import ThemedView from '../components/ThemedView';
+
 const Home = () => {
   const colorScheme = useColorScheme();
   const theme = Colors[colorScheme] ?? Colors.light;
 
   return (
     <>
-      <View
+      <ThemedView
         style={{
           flex: 1,
           justifyContent: 'center',
           alignItems: 'center',
-          backgroundColor: theme.background,
         }}
       >
         <Image source={Logo} style={styles.Image} />
@@ -45,7 +46,7 @@ const Home = () => {
             Contact Us
           </Link>
         </View>
-      </View>
+      </ThemedView>
     </>
   );
 };
