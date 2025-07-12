@@ -2,7 +2,7 @@ export const Colors = {
   primary: '#6200ee',
   warning: '#cc475a',
   light: {
-    background: '#f4f4f4ff',
+    background: '#ffffffff',
     text: '#000000',
     title: '#333333',
     linkText: '#6200ee',

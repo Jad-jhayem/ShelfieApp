@@ -1,9 +1,8 @@
 import { Link } from 'expo-router';
-import { Image, StyleSheet, Text, View, useColorScheme } from 'react-native';
+import { StyleSheet, Text, View, useColorScheme } from 'react-native';
 import { Colors } from '../constants/colors';
 
-import Logo from '../assets/logo/Logo.png';
-
+import ThemedLogo from '../components/ThemedLogo';
 import ThemedView from '../components/ThemedView';
 
 const Home = () => {
@@ -19,7 +18,7 @@ const Home = () => {
           alignItems: 'center',
         }}
       >
-        <Image source={Logo} style={styles.Image} />
+        <ThemedLogo style={styles.Image} />
 
         <Text style={[styles.title, { color: theme.text }]}>The Number 1</Text>
         <Text style={[styles.subtitle, { color: theme.text }]}>
@@ -68,7 +67,7 @@ const styles = StyleSheet.create({
   Image: {
     width: 150,
     height: 150,
-    borderRadius: 100,
+    borderRadius: 50,
   },
   link: {
     padding: 10,
