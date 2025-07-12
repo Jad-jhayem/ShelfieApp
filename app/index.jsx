@@ -1,9 +1,10 @@
 import { Link } from 'expo-router';
-import { StyleSheet, Text, View, useColorScheme } from 'react-native';
+import { StyleSheet, View, useColorScheme } from 'react-native';
 import { Colors } from '../constants/colors';
 
 import Spacer from '../components/Spacer';
 import ThemedLogo from '../components/ThemedLogo';
+import ThemedText from '../components/ThemedText';
 import ThemedView from '../components/ThemedView';
 
 const Home = () => {
@@ -23,13 +24,13 @@ const Home = () => {
 
         <Spacer />
 
-        <Text style={[styles.title, { color: theme.text }]}>The Number 1</Text>
+        <ThemedText style={[styles.title]} title>
+          The Number 1
+        </ThemedText>
 
         <Spacer />
 
-        <Text style={[styles.subtitle, { color: theme.text }]}>
-          Reading List App
-        </Text>
+        <ThemedText style={[styles.text]}>Reading List App</ThemedText>
 
         <View style={styles.linkContainer}>
           <Link
@@ -64,7 +65,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textAlign: 'center',
   },
-  subtitle: {
+  text: {
     fontSize: 16,
     textAlign: 'center',
   },
