@@ -1,5 +1,8 @@
 import { Link } from 'expo-router';
-import { Text, View, useColorScheme } from 'react-native';
+import { useColorScheme } from 'react-native';
+import Spacer from '../components/Spacer';
+import ThemedText from '../components/ThemedText';
+import ThemedView from '../components/ThemedView';
 import { Colors } from '../constants/colors';
 
 const About = () => {
@@ -8,21 +11,24 @@ const About = () => {
 
   return (
     <>
-      <View
+      <ThemedView
         style={{
           flex: 1,
           justifyContent: 'center',
           alignItems: 'center',
-          backgroundColor: theme.background,
         }}
       >
-        <Text style={[styles.title, { color: theme.title }]}>
-          About Shelfie
-        </Text>
-        <Text style={[styles.subtitle, { color: theme.text }]}>
+        <ThemedText style={[styles.title]}>About Shelfie</ThemedText>
+
+        <Spacer />
+
+        <ThemedText style={[styles.text]}>
           Shelfie is the number one reading list app,{'\n'}designed to help you
           keep track of your reading journey.
-        </Text>
+        </ThemedText>
+
+        <Spacer />
+
         <Link
           href="/"
           style={[
@@ -32,7 +38,7 @@ const About = () => {
         >
           Go back to Home
         </Link>
-      </View>
+      </ThemedView>
     </>
   );
 };
@@ -43,16 +49,13 @@ const styles = {
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginTop: 20,
   },
-  subtitle: {
+  text: {
     fontSize: 16,
     textAlign: 'center',
-    marginVertical: 10,
   },
   link: {
     padding: 10,
-    marginTop: 20,
     fontSize: 16,
     borderWidth: 1,
     textDecorationLine: 'none',
