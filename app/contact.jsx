@@ -1,5 +1,8 @@
 import { Link } from 'expo-router';
-import { Text, View, useColorScheme } from 'react-native';
+import { useColorScheme } from 'react-native';
+import Spacer from '../components/Spacer';
+import ThemedText from '../components/ThemedText';
+import ThemedView from '../components/ThemedView';
 import { Colors } from '../constants/colors';
 
 const Contact = () => {
@@ -8,18 +11,23 @@ const Contact = () => {
 
   return (
     <>
-      <View
+      <ThemedView
         style={{
           flex: 1,
           justifyContent: 'center',
           alignItems: 'center',
-          backgroundColor: theme.background,
         }}
       >
-        <Text style={[styles.title, { color: theme.title }]}>Contact Us</Text>
-        <Text style={[styles.subtitle, { color: theme.text }]}>
+        <ThemedText style={[styles.title, { color: theme.title }]}>
+          Contact Us
+        </ThemedText>
+        <Spacer />
+        <ThemedText style={[styles.subtitle, { color: theme.text }]}>
           If you have any questions or feedback, feel free to reach out to us!
-        </Text>
+        </ThemedText>
+
+        <Spacer />
+
         <Link
           href="/"
           style={[
@@ -29,7 +37,7 @@ const Contact = () => {
         >
           Go back to Home
         </Link>
-      </View>
+      </ThemedView>
     </>
   );
 };
@@ -49,7 +57,6 @@ const styles = {
   },
   link: {
     padding: 10,
-    marginTop: 20,
     fontSize: 16,
     borderWidth: 1,
     textDecorationLine: 'none',
