@@ -76,4 +76,20 @@ const styles = StyleSheet.create({
     textDecorationLine: 'none',
     marginHorizontal: 10,
   },
+  card: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    padding: 20,
+    borderRadius: 10,
+    marginTop: 20,
+    alignItems: 'center',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
+  },
 });
